@@ -350,7 +350,7 @@ app.post("/get-tier", async (req, res) => {
     const tier_query = `select tier from user_details where id = ?`
     try {
         const tier = await db.get(tier_query, decoded.id)
-        res.send(tier)
+        res.send(1)
     } catch (error) {
         console.log(error)
         res.status(400)
